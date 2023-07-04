@@ -27,7 +27,7 @@ fetch("https://jscart-hasankarim18.vercel.app/products")
         <figure><img class="h-60 w-full" src="${item.image}" /></figure>
         <div class="card-body">
            <div>Product Id:  <span class="product_id" > ${item.product_id} </span>  </div>
-            <h2 class="card-title">${item.product_name}</h2>
+            <h2 class=" product_name card-title">${item.product_name}</h2>
             <p class="font-bold text-rose-400"> Price: $<span class="price">${item.price}</span>/-</p>
             <div class="card-actions justify-end">
                  <button  class="btn btn-success buy-now btn-md">Buy Now</button>
@@ -56,6 +56,7 @@ function handleBuyNow(event) {
   const price = parseFloat( parent.querySelector(".price").innerText, 10)
   const priceFloat = parseFloat(price.toFixed(2));
   const productId = parent.querySelector('.product_id').innerText
+  const productName = parent.querySelector(".product_name").innerText
 
   let cartData = localStorage.getItem('js_cart')
 
@@ -64,7 +65,6 @@ function handleBuyNow(event) {
   }else {
     cartData = []
   }
-
 
   // checking if product exists 
    const existingProductIndex = cartData.findIndex(
@@ -77,9 +77,10 @@ function handleBuyNow(event) {
      // If the product is not in the cart, add it to the cart with a quantity of 1
     
      cartData.push({
+       product_name: productName,
        product_id: productId,
        quantity: 1,
-       price:priceFloat
+       unitPrice: priceFloat,
      });
    }
 

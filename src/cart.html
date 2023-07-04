@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./style.css" rel="stylesheet" />
+    <title>Cart | Js Cart</title>
+  </head>
+  <body>
+    <div>
+      <div class="container mx-auto">
+        <!-- #navigation -->
+        <div
+          class="navbar h-14 container mx-auto fixed top-0 z-50 border border-transparent border-b-rose-400 bg-black text-white"
+        >
+          <div class="flex-1">
+            <a class="btn btn-ghost normal-case text-xl text-rose-400"
+              >Js Cart</a
+            >
+          </div>
+          <div class="flex-none">
+            <ul class="menu menu-horizontal px-1">
+              <li class="hover:text-rose-400">
+                <a class="hover:text-rose-400 text-xl" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="hover:text-rose-400">
+                <div class="indicator hover:text-rose-400">
+                  <a href="cart.html" class="hover:text-rose-400 text-xl"
+                    >Cart</a
+                  >
+                  <span
+                    id="totalItem"
+                    class="indicator-item badge badge-secondary"
+                    >0</span
+                  >
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- #endNavigation -->
+
+        <div class="mt-20">
+          <div class="flex justify-between" >
+            <h2 class="text-3xl">Cart</h2>
+            <div> <button id="clear_cart" class="btn btn-error btn-xs">Clear Cart</button> </div>
+          </div>
+        </div>
+        <div id="">
+          <div class="overflow-x-auto">
+            <table class="table table-zebra">
+              <!-- head -->
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Product Name</th>
+                  <th>Product Id</th>
+                  <th>Unit Price ($)</th>
+                  <th>Quantity</th>
+                  <th>Sub Total</th>
+                </tr>
+              </thead>
+              <tbody id="showCart"></tbody>
+              <tfoot>
+                <th></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Total Price</td>
+                <td><span id="total" class="font-bold text-xl">0</span></td>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+        <!-- payment section  -->
+
+        <h2 class="text-3xl">
+          Total Payable Amount: $<span id="totalpayable"></span>/-
+        </h2>
+        <div class="mt-4">
+          <button id="pay_now" class="btn btn-success">Pay Now</button>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="./cart.js"></script>
+  <!-- <script src="./index.js"></script> -->
+</html>
