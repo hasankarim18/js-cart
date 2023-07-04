@@ -4,69 +4,79 @@
     "product_id": "LPT001",
     "price": 1299.99,
     "quantity": 10,
-    "stars": 4.8
+    "stars": 4.8,
+    "image": "https://cdn.pixabay.com/photo/2015/02/02/11/09/office-620822_640.jpg"
   },
   {
     "product_name": "Samsung 27-Inch Curved Monitor",
     "product_id": "MON002",
     "price": 299.99,
     "quantity": 5,
-    "stars": 4.5
+    "stars": 4.5,
+    "image": "https://cdn.pixabay.com/photo/2016/04/04/14/12/monitor-1307227_640.jpg"
   },
   {
     "product_name": "Apple iPhone 12 Pro",
     "product_id": "MBL003",
     "price": 1099.99,
     "quantity": 8,
-    "stars": 4.7
+    "stars": 4.7,
+    "image": "https://cdn.pixabay.com/photo/2014/08/05/10/27/iphone-410311_640.jpg"
   },
   {
     "product_name": "Sony Bravia 55-Inch 4K TV",
     "product_id": "TV004",
     "price": 999.99,
     "quantity": 3,
-    "stars": 4.6
+    "stars": 4.6,
+    "image": "https://cdn.pixabay.com/photo/2013/07/13/01/20/monitor-155565_640.png"
   },
   {
     "product_name": "Logitech G Pro Mechanical Gaming Keyboard",
     "product_id": "KBD005",
     "price": 149.99,
     "quantity": 7,
-    "stars": 4.4
+    "stars": 4.4,
+    "image": "https://cdn.pixabay.com/photo/2012/12/17/19/14/keyboard-70506_640.jpg"
   },
   {
     "product_name": "Razer DeathAdder Elite Gaming Mouse",
     "product_id": "MS006",
     "price": 69.99,
     "quantity": 12,
-    "stars": 4.7
+    "stars": 4.7,
+    "image": "https://cdn.pixabay.com/photo/2013/07/12/17/41/computer-mouse-152249_640.png"
   },
   {
     "product_name": "Lenovo ThinkPad X1 Carbon Laptop",
     "product_id": "LPT007",
     "price": 1699.99,
     "quantity": 9,
-    "stars": 4.6
+    "stars": 4.6,
+    "image": "https://cdn.pixabay.com/photo/2017/11/27/21/31/computer-2982270_640.jpg"
   },
   {
     "product_name": "LG UltraWide 34-Inch Curved Monitor",
     "product_id": "MON008",
     "price": 599.99,
     "quantity": 6,
-    "stars": 4.3
+    "stars": 4.3,
+    "image": "https://cdn.pixabay.com/photo/2017/01/22/12/07/imac-1999636_640.png"
   },
   {
     "product_name": "Samsung Galaxy S21",
     "product_id": "MBL009",
     "price": 799.99,
     "quantity": 11,
-    "stars": 4.5
+    "stars": 4.5,
+    "image": "https://cdn.pixabay.com/photo/2015/05/31/10/55/tablet-791051_640.jpg"
   },
   {
     "product_name": "LG OLED 65-Inch 4K Smart TV",
     "product_id": "TV010",
     "price": 1999.99,
     "quantity": 4,
-    "stars": 4.9
+    "stars": 4.9,
+    "image": "https://cdn.pixabay.com/photo/2019/01/08/10/58/smart-home-3920905_640.jpg"
   }
 ]
