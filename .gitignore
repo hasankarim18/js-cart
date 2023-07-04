@@ -7,3 +7,5 @@ node_modules
 
 /atlas-server/.env
 /atlas-server/node_modules
+# Local Netlify folder
+.netlify
