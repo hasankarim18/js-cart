@@ -8,10 +8,10 @@ const fetchProducts = ()=> {
   
 const productContainer = document.getElementById("products");
 
-fetch("http://localhost:5000/products")
+fetch("https://jscart-hasankarim18.vercel.app/products")
   .then((res) => res.json())
   .then((data) => {
-   // let products = [];
+    // let products = [];
     if (data.message === "success") {
       products = data.data;
     } else if (data.message === "error") {
@@ -20,7 +20,7 @@ fetch("http://localhost:5000/products")
       products = [];
     }
 
-    products.map((item) => {      
+    products.map((item) => {
       const div = document.createElement("div");
       div.innerHTML = `
     <div  class="border  rounded-xl w-full bg-base-100 card">
@@ -35,15 +35,15 @@ fetch("http://localhost:5000/products")
         </div>
     </div>           
   `;
-    productContainer.appendChild(div);
-    });  
+      productContainer.appendChild(div);
+    });
   })
-  .then(()=> {
+  .then(() => {
     const buyNowButtons = document.querySelectorAll(".buy-now");
     buyNowButtons.forEach((button) => {
       button.addEventListener("click", handleBuyNow);
     });
-   // console.log(buyNowButtons)
+    // console.log(buyNowButtons)
   })
   .catch((err) => {
     console.log(err);
@@ -71,12 +71,11 @@ function handleBuyNow(event) {
      (item) => item.product_id === productId
    );
    if (existingProductIndex !== -1) {
-     // If the product is already in the cart, increment the quantity
-     console.log('exists');
+     // If the product is already in the cart, increment the quantity 
      cartData[existingProductIndex].quantity++;
    } else {
      // If the product is not in the cart, add it to the cart with a quantity of 1
-     console.log('new product');
+    
      cartData.push({
        product_id: productId,
        quantity: 1,
@@ -96,21 +95,19 @@ function handleBuyNow(event) {
 
 const showTotalItem = ()=> {
   const cartData = JSON.parse(localStorage.getItem('js_cart'))
-  const totalNumberOfProducts = cartData.reduce((total,cart )=> total + cart.quantity   , 0)
-  console.log(totalNumberOfProducts);
-  document.getElementById("totalItem").innerHTML = totalNumberOfProducts;
-
+  if(cartData){
+    if (cartData.length > 0) {
+      const totalNumberOfProducts = cartData.reduce(
+        (total, cart) => total + cart.quantity,
+        0
+      );
+      console.log(totalNumberOfProducts);
+      document.getElementById("totalItem").innerHTML = totalNumberOfProducts;
+    }
+  }
 }
 
 showTotalItem()
-
-
-
- 
-
-
-
-
 
 
 fetchProducts();
